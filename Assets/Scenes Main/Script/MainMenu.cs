@@ -5,6 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    GameObject set, setUI;
+
+    public void Awake()
+    {
+        setUI = GameObject.Find("SettingUI");
+        setUI.SetActive(false);
+        set = GameObject.Find("Fade");
+        set.SetActive(false);
+    }
+
     public void Exit()
     {
         Application.Quit();
@@ -19,5 +29,11 @@ public class MainMenu : MonoBehaviour
     public void Adventure()
     {
         Debug.Log("Adventure Mode");
+    }
+
+    public void Setting()
+    {
+        setUI.SetActive(true);
+        set.SetActive(true);
     }
 }
