@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Vuforia;
 
-public class VirtualButtonScript : MonoBehaviour, 
+public class VirtualButtonScript : MonoBehaviour
 {
     public VirtualButtonBehaviour vbBtnObj;
     public GameObject cube;
