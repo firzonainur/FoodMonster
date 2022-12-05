@@ -5,14 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    GameObject set, setUI;
+    [SerializeField] private GameObject set, setUI;
 
-    public void Awake()
+    private void Awake()
     {
-        setUI = GameObject.Find("SettingUI");
-        setUI.SetActive(false);
-        set = GameObject.Find("Fade");
         set.SetActive(false);
+        setUI.SetActive(false);
     }
 
     public void Exit()
@@ -23,11 +21,13 @@ public class MainMenu : MonoBehaviour
 
     public void Stage()
     {
+        SceneManager.LoadScene(1);
         Debug.Log("Stage");
     }
 
     public void Adventure()
     {
+        SceneManager.LoadScene(2);
         Debug.Log("Adventure Mode");
     }
 
